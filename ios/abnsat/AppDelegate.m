@@ -1,11 +1,16 @@
 // Copyright 2015-present 650 Industries. All rights reserved.
 
 #import "AppDelegate.h"
+#import <GoogleCast/GoogleCast.h>
+
+static NSString * const kReceiverApplicationID = @"5FA87CBE";
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  GCKCastOptions *options = [[GCKCastOptions alloc] initWithReceiverApplicationID:kReceiverApplicationID];
+  [GCKCastContext setSharedInstanceWithOptions:options];
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
 

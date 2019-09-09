@@ -5,20 +5,20 @@ import {
     Button,
     Dimensions,
     FlatList,
+    NativeModules,
     ScrollView,
     Text,
     View,
 } from "react-native";
 import {SafeAreaView, withNavigation} from "react-navigation";
-// import {CastContext} from "rn-google-cast";
 
 import {getCategories, getChannels} from "../api";
 import ChannelCard from "../components/ChannelCard";
+import GoogleCast from "../utils/GoogleCast";
+
 import {homeScreenStyles as styles} from "../styles.js";
 
-export const NAMESPACE = "urn:x-cast:com.abnsat.chromecast";
-
-const CastContext = {};
+const NAMESPACE = "urn:x-cast:com.abnsat.chromecast";
 
 class HomeScreen extends React.Component {
     state = {
@@ -58,8 +58,8 @@ class HomeScreen extends React.Component {
 
     onChannelPress = channel => () => {
         // this.props.navigation.navigate("Video", {channel});
-        CastContext.initChannel(NAMESPACE).then(() => {
-            CastContext.sendMessage(NAMESPACE, channel.embed_url);
+        GoogleCast.initChannel(NAMESPACE).then(() => {
+            GoogleCast.sendMessage(NAMESPACE, channel.embed_url);
         });
     };
 

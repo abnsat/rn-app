@@ -1,9 +1,10 @@
 // @flow
 import React from "react";
-import {ActionSheetIOS, Platform, StyleSheet} from "react-native";
-// import {CastContext, CastButton as GoogleCastButton} from "rn-google-cast";
+import {ActionSheetIOS, Platform, requireNativeComponent, StyleSheet} from "react-native";
 
-const NativeCastButton = null;
+import GoogleCast from "../utils/GoogleCast";
+
+const NativeCastButton = requireNativeComponent("RNGoogleCastButton");
 
 const styles = StyleSheet.create({
     castButton: {
@@ -25,7 +26,7 @@ export default class CastButton extends React.Component {
                 },
                 index => {
                     if (index < devices.length) {
-                        CastContext.startSession(devices[index].id);
+                        GoogleCast.startSession(devices[index].id);
                     }
                 },
             );
@@ -42,7 +43,7 @@ export default class CastButton extends React.Component {
                 },
                 index => {
                     if (index === 0) {
-                        CastContext.endSession();
+                        GoogleCast.endSession();
                     }
                 },
             );
@@ -50,9 +51,8 @@ export default class CastButton extends React.Component {
     };
 
     render() {
-        if (!NativeCastButton) return null;
         return (
-            <GoogleCastButton
+            <NativeCastButton
                 style={styles.castButton}
                 triggersDefaultCastDialog={Platform.OS !== "ios"}
                 onPress={this.onPress}
