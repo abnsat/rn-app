@@ -10,3 +10,8 @@ npm-debug.*
 web-build/
 web-report/
 ios/Pods/
+ios/abnsat/Supporting/shell-app.bundle
+ios/abnsat/Supporting/shell-app-manifest.json
+android/app/src/main/java/host/exp/exponent/generated/AppConstants.java
+android/app/src/main/assets/shell-app.bundle
+android/app/src/main/assets/shell-app-manifest.json
