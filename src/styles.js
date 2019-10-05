@@ -12,7 +12,7 @@ export const homeScreenStyles = StyleSheet.create({
     },
     categoryFlatListContent: {
         flex: 0,
-        paddingHorizontal: 8,
+        paddingHorizontal: 12,
     },
     categoryTitle: {
         color: "#ffffff",
@@ -23,10 +23,9 @@ export const homeScreenStyles = StyleSheet.create({
         paddingTop: 24,
     },
     channelCardContainer: {
-        paddingHorizontal: 8,
+        paddingHorizontal: 4,
     },
     container: {
-        flex: 1,
         backgroundColor: "#0073c6",
     },
     errorContainer: {
@@ -49,12 +48,7 @@ export const channelCardStyles = StyleSheet.create({
         width: "100%",
         height: "auto",
     },
-    channelContainer: {
-        borderRadius: 8,
-        borderWidth: 1,
-        borderColor: "#ffffff",
-        overflow: "hidden",
-    },
+    channelContainer: {},
 });
 
 export const videoScreenStyles = StyleSheet.create({

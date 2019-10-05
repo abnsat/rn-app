@@ -57,10 +57,10 @@ class HomeScreen extends React.Component {
     };
 
     onChannelPress = channel => () => {
-        // this.props.navigation.navigate("Video", {channel});
-        GoogleCast.initChannel(NAMESPACE).then(() => {
-            GoogleCast.sendMessage(NAMESPACE, channel.embed_url);
-        });
+        this.props.navigation.navigate("Video", {channel});
+        // GoogleCast.initChannel(NAMESPACE).then(() => {
+        //     GoogleCast.sendMessage(NAMESPACE, channel.embed_url);
+        // });
     };
 
     onTryAgainPress = () => {
@@ -129,11 +129,11 @@ class HomeScreen extends React.Component {
         }
 
         const {width} = Dimensions.get("window");
-        const itemWidth = width / 1.75;
+        const itemWidth = width - 100;
 
         return (
-            <SafeAreaView style={styles.container}>
-                <ScrollView contentContainerStyle={styles.contentContainer}>
+            <ScrollView style={styles.container}>
+                <SafeAreaView>
                     {categories.map(category => (
                         <View
                             key={category.title}
@@ -146,6 +146,7 @@ class HomeScreen extends React.Component {
                                 horizontal
                                 contentContainerStyle={styles.categoryFlatListContent}
                                 data={category.channels}
+                                decelerationRate="fast"
                                 keyExtractor={(item, index) =>
                                     item.name + index
                                 }
@@ -163,11 +164,12 @@ class HomeScreen extends React.Component {
                                     </View>
                                 )}
                                 showsHorizontalScrollIndicator={false}
+                                snapToInterval={itemWidth}
                             />
                         </View>
                     ))}
-                </ScrollView>
-            </SafeAreaView>
+                </SafeAreaView>
+            </ScrollView>
         );
     }
 }

@@ -7,13 +7,16 @@ export default class Video extends React.Component {
     startTime = 0;
     videoIndex = 0;
 
-    componentDidMount() {
-        this.calculateStart();
+    componentWillMount() {
+        const {live} = this.props;
+        if (!live) {
+            this.calculateStart();
+        }
     }
 
     // calculates start time based on seconds since epoch
     calculateStart = () => {
-        const {playlistItems: items} = this.props;
+        const {playlistItems: items = []} = this.props;
 
         // duration is in ms
         var totalDuration = 0;
@@ -36,9 +39,10 @@ export default class Video extends React.Component {
                 var startTime = offset / 1000;
                 var videoIndex = i;
 
-                // skip to next track if offset too large
+                // skip to next track if we are near the end of current track
                 var diff = itemDuration - offset;
                 if (diff < 5000) {
+                    console.log("go to first clip", diff);
                     startTime = 0;
                     videoIndex += 1;
                     if (videoIndex === items.length) {
@@ -55,9 +59,22 @@ export default class Video extends React.Component {
     };
 
     render() {
-        const {hlsUrl} = this.props;
+        const {hlsUrl, live, playlistItems} = this.props;
+        const sourceUri = !!live ? hlsUrl : playlistItems[this.videoIndex].url;
         return (
-            <RNVideo shouldPlay resizeMode="contain" style={styles.video} source={{uri: hlsUrl}} />
+            <RNVideo
+                audioOnly
+                shouldPlay
+                ref={ref => (this.player = ref)}
+                resizeMode="contain"
+                style={styles.video}
+                source={{uri: sourceUri}}
+                onLoad={() => {
+                    if (!live) {
+                        this.player.seek(this.startTime);
+                    }
+                }}
+            />
         );
     }
 }
