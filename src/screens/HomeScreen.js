@@ -14,7 +14,7 @@ import {SafeAreaView, withNavigation} from "react-navigation";
 
 import {getCategories, getChannels} from "../api";
 import ChannelCard from "../components/ChannelCard";
-import GoogleCast from "../utils/GoogleCast";
+// import GoogleCast from "../utils/GoogleCast";
 
 import {homeScreenStyles as styles} from "../styles.js";
 
