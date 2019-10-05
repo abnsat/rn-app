@@ -6,7 +6,10 @@ import {createDrawerNavigator} from "react-navigation-drawer";
 import {createStackNavigator} from "react-navigation-stack";
 import Icon from "react-native-ionicons";
 
-import CastButton from "./src/components/CastButton";
+// import CastButton from "./src/components/CastButton";
+const CastButton = () => (
+    <View />
+);
 import HomeScreen from "./src/screens/HomeScreen";
 import VideoScreen from "./src/screens/VideoScreen";
 import DonateScreen from "./src/screens/DonateScreen";
