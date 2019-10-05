@@ -1,24 +1,27 @@
+// @flow
 import React from "react";
-import {ImageBackground, Platform, StyleSheet, View, TouchableHighlight, Text} from "react-native";
+import {ImageBackground, Platform, StyleSheet, View, TouchableOpacity, Text} from "react-native";
 
+import {placeholder} from "../constants";
 import {channelCardStyles as styles} from "../styles.js";
 
 const ChannelCard = ({onPress, thumbnail}) => (
-    <TouchableHighlight
+    <TouchableOpacity
+        activeOpacity={0.5}
         style={[
             styles.channelContainer,
             Platform.isPad ? styles.channelContainerTablet : {},
             Platform.isTV ? styles.channelContainerTV : {},
         ]}
-        underlayColor="transparent"
         onPress={onPress}
     >
         <ImageBackground
-            style={styles.channelBackground}
             imageStyle={{resizeMode: "cover"}}
+            defaultSource={placeholder}
             source={{uri: thumbnail}}
+            style={styles.channelBackground}
         />
-    </TouchableHighlight>
+    </TouchableOpacity>
 );
 
 export default ChannelCard;

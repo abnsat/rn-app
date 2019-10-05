@@ -9,7 +9,8 @@ import Icon from "react-native-ionicons";
 import CastButton from "./src/components/CastButton";
 import HomeScreen from "./src/screens/HomeScreen";
 import VideoScreen from "./src/screens/VideoScreen";
-import WebViewScreen from "./src/screens/WebViewScreen";
+import DonateScreen from "./src/screens/DonateScreen";
+import FaqScreen from "./src/screens/FaqScreen";
 
 export const NAMESPACE = "urn:x-cast:com.abnsat.chromecast";
 
@@ -25,12 +26,8 @@ const styles = StyleSheet.create({
 const DrawerNavigator = createDrawerNavigator(
     {
         Home: HomeScreen,
-        FAQ: () => (
-            <WebViewScreen uri="http://vidmgr.abnvideos.com/pages/faq/webview" />
-        ),
-        Donate: () => (
-            <WebViewScreen uri="http://vidmgr.abnvideos.com/pages/donate/webview" />
-        ),
+        FAQ: FaqScreen,
+        Donate: DonateScreen,
     },
     {
         initialRouteName: "Home",

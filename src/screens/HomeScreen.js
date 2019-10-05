@@ -129,7 +129,7 @@ class HomeScreen extends React.Component {
         }
 
         const {width} = Dimensions.get("window");
-        const itemWidth = width / 2;
+        const itemWidth = width / 1.75;
 
         return (
             <SafeAreaView style={styles.container}>
@@ -144,7 +144,7 @@ class HomeScreen extends React.Component {
                             </Text>
                             <FlatList
                                 horizontal
-                                style={styles.categoryFlatList}
+                                contentContainerStyle={styles.categoryFlatListContent}
                                 data={category.channels}
                                 keyExtractor={(item, index) =>
                                     item.name + index
@@ -162,6 +162,7 @@ class HomeScreen extends React.Component {
                                         />
                                     </View>
                                 )}
+                                showsHorizontalScrollIndicator={false}
                             />
                         </View>
                     ))}

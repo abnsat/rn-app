@@ -10,15 +10,17 @@ export const homeScreenStyles = StyleSheet.create({
     category: {
         padding: 10,
     },
-    categoryFlatList: {
+    categoryFlatListContent: {
         flex: 0,
         paddingHorizontal: 8,
     },
     categoryTitle: {
+        color: "#ffffff",
+        fontSize: 16,
+        fontWeight: "bold",
         paddingBottom: 8,
         paddingLeft: 16,
         paddingTop: 24,
-        color: "#ffffff",
     },
     channelCardContainer: {
         paddingHorizontal: 8,
@@ -46,6 +48,12 @@ export const channelCardStyles = StyleSheet.create({
         flex: 0,
         width: "100%",
         height: "auto",
+    },
+    channelContainer: {
+        borderRadius: 8,
+        borderWidth: 1,
+        borderColor: "#ffffff",
+        overflow: "hidden",
     },
 });
 
