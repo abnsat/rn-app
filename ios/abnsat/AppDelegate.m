@@ -1,6 +1,7 @@
 // Copyright 2015-present 650 Industries. All rights reserved.
 
 #import "AppDelegate.h"
+#import "FIRApp.h"
 #import <GoogleCast/GoogleCast.h>
 
 static NSString * const kReceiverApplicationID = @"5FA87CBE";
@@ -11,6 +12,7 @@ static NSString * const kReceiverApplicationID = @"5FA87CBE";
 {
   GCKCastOptions *options = [[GCKCastOptions alloc] initWithReceiverApplicationID:kReceiverApplicationID];
   [GCKCastContext setSharedInstanceWithOptions:options];
+  [FIRApp configure];
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
 

@@ -12,6 +12,7 @@
 		612D41EC23258C0E000E429E /* RNGoogleCast.m in Sources */ = {isa = PBXBuildFile; fileRef = 612D41E823258C0E000E429E /* RNGoogleCast.m */; };
 		612D41ED23258C0E000E429E /* RNGoogleCastButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 612D41EA23258C0E000E429E /* RNGoogleCastButton.m */; };
 		612D41EE23258C0E000E429E /* RNGoogleCastButtonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 612D41EB23258C0E000E429E /* RNGoogleCastButtonManager.m */; };
+		615190362355F9FC00A35150 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 615190352355F9FC00A35150 /* GoogleService-Info.plist */; };
 		B501732B1DC01252003445D9 /* EXShell.plist in Resources */ = {isa = PBXBuildFile; fileRef = B501732A1DC01252003445D9 /* EXShell.plist */; };
 		B56386491DB9693800A0598C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B56386481DB9693800A0598C /* AppDelegate.m */; };
 		B56386511DB9693800A0598C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B56386501DB9693800A0598C /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		612D41E923258C0E000E429E /* RNGoogleCastButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNGoogleCastButton.h; sourceTree = "<group>"; };
 		612D41EA23258C0E000E429E /* RNGoogleCastButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNGoogleCastButton.m; sourceTree = "<group>"; };
 		612D41EB23258C0E000E429E /* RNGoogleCastButtonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNGoogleCastButtonManager.m; sourceTree = "<group>"; };
+		615190352355F9FC00A35150 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		933D028CEFDD4482B2A214A5 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-ionicons/fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		A47FE4D7F70906B7DC8CE39B /* Pods-abnsat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-abnsat.release.xcconfig"; path = "Pods/Target Support Files/Pods-abnsat/Pods-abnsat.release.xcconfig"; sourceTree = "<group>"; };
 		B501732A1DC01252003445D9 /* EXShell.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EXShell.plist; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 		B56386431DB9693800A0598C /* abnsat */ = {
 			isa = PBXGroup;
 			children = (
+				615190352355F9FC00A35150 /* GoogleService-Info.plist */,
 				B56386471DB9693800A0598C /* AppDelegate.h */,
 				B56386481DB9693800A0598C /* AppDelegate.m */,
 				B56386501DB9693800A0598C /* Assets.xcassets */,
@@ -216,6 +219,7 @@
 				B5693E8E1FABD16A00307FA4 /* LaunchScreen.xib in Resources */,
 				B5DB04801F3A684600E91581 /* shell-app-manifest.json in Resources */,
 				B5DB04811F3A684600E91581 /* shell-app.bundle in Resources */,
+				615190362355F9FC00A35150 /* GoogleService-Info.plist in Resources */,
 				B56386511DB9693800A0598C /* Assets.xcassets in Resources */,
 				2D305AE6C9B74747B3C8EF89 /* Ionicons.ttf in Resources */,
 			);

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>772937173906-b7ehjvu059fl22i2rh0iq1dvidl362h1.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.772937173906-b7ehjvu059fl22i2rh0iq1dvidl362h1</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCTP1SnluuAynEbXm_2djaV1XbIxFts2D8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>772937173906</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.abnsat.v1</string>
+	<key>PROJECT_ID</key>
+	<string>abnast-155901</string>
+	<key>STORAGE_BUCKET</key>
+	<string>abnast-155901.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:772937173906:ios:50e5eea68ba03034568f4b</string>
+	<key>DATABASE_URL</key>
+	<string>https://abnast-155901.firebaseio.com</string>
+</dict>
+</plist>
